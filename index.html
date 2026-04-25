@@ -1,0 +1,118 @@
+ <!--Inicio-->
+    <!--Esto le dice al navegador: 
+    “Este documento es HTML5”-->
+<!DOCTYPE html>
+    <!--"es" Indica el idioma del documento -->
+<html lang="es"> 
+<head>
+    <!--<head> Es la “cabeza” del documento
+        Aquí van configuraciones, no contenido visible.-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <!-- enlace a mi hoja de estilos, (Lo dividi primeropor sección 
+        primero carpeta principal src, carpeta css y archivo styles.css) -->
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/@media.css">
+</head>
+<body>
+    <!--El body es todo lo que el usuario ve, y el cuerpo de la página-->
+    <!--El <header> es una etiqueta que se usa para la parte superior de una página o sección.-->
+    <!-- encabezado con mi nombre y menu -->
+    <header>
+        <h1>Leonela Miranda</h1>
+    <!--Texto del titulo-->
+    <!-- Botón Hamburgesa -->
+    <!--Este botón se utiliza para mostrar u ocultar el menú de navegación 
+        en dispositivos móviles o pantallas pequeñas. Al hacer clic en él, 
+        se activa una función JavaScript que alterna la visibilidad del menú,
+        permitiendo a los usuarios acceder a las diferentes secciones del sitio de manera
+        más cómoda en dispositivos con espacio limitado.-->
+    <button id="menu-toggle" class="menu-toggle">
+        ☰ <!-- Este símbolo representa el ícono de menú hamburguesa -->
+    </button>
+    <!-- Menu de navegación -->
+    <!--El <nav> es una etiqueta que se usa para contener enlaces de navegación.-->
+    <!-- El hrefes la ruta o dirección a donde quieres ir-->
+    <!--Lo utilice de esta manera para garantizar un orden mas efectivo en la arquitectura del sitio-->
+        <nav id="menu"> 
+            <a href="#sobremi">Sobre mí</a> 
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
+            <a href="mascotas.html">Mascotas</a>
+            
+        </nav>
+    </header>
+
+    <!-- seccion sobre mi -->
+    <!--<section> Es un bloque que sirve para dividir la página en partes.-->
+    <!--id es un identificador único para un elemento. Es como ponerle un nombre exclusivo a algo.-->
+    <!--Esta divición la utilice para organizar el contenido de la sección "Sobre mí"-->
+    <section id="sobremi" class="sobremi">
+        <div>
+            <h2>Sobre mí</h2>
+    <!-- este parrafo lo cambia el javascript -->
+            <p id="texto-sobremi">
+    <!--"El <p y id" juntos significan:un párrafo con un nombre único para poder identificarlo.
+        Añado un textp para la descripción.-->
+                Soy una persona comprometida en constante crecimiento, apasionada por aprender y desarrollar nuevas habilidades. Me destaco por mi responsabilidad, creatividad y disposición para trabajar en equipo. Actualmente estoy enfocada en fortalecer mis conocimientos en el área digital, especialmente en el desarrollo web, buscando siempre mejorar y dar lo mejor de mí en cada proyecto.
+            </p>
+    <!-- botones con interactividad -->
+            <button id="btn-contactame">Contáctame</button>
+    <!--Esto deja descargar el CV (mi hoja de vida en PDF)-->
+            <a href="public/doc/hoja-de-vida.pdf" download id="btn-cv" class="btn-cv">Descargar CV</a>   
+                <p id="mensaje-cv" class="mensaje-cv">Tu CV está listo para descargar.</p>
+        </div>
+    <!-- foto de perfil. -->
+        <article class="perfil">
+    <!--<article> Es un bloque de contenido que se entiende solo,
+        esto lo coloque para mostrar mi foto de perfil-->
+            <img src="public/img/leonela.jpeg" alt="Foto de Leonela Miranda">
+        </article>
+    </section>
+
+    <!-- seccion de proyectos -->
+    <section id="proyectos" class="proyectos">
+    <!--El titulo de la sección-->
+        <h2>Proyectos</h2>
+        <ul>
+    <!--<ul>Es una lista de elementos con viñetas (puntitos).-->
+    <!--<li> Es cada elemento individual dentro de una lista.-->
+    <!--Colocamos los proyectos en la lista para que se muestren de forma ordenada,
+        y halla mas opciones en la pagina. "Opciones con proposito".-->
+            <li><a href="#">Proyecto 1 - Página de recetas</a></li>
+            <li><a href="#">Proyecto 2 - Calculadora web</a></li>
+            <li><a href="#">Proyecto 3 - Blog personal</a></li>
+        </ul>
+    </section>
+
+    <!-- seccion de contacto -->
+    <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+
+        <form action="#" method="post">
+    <!--Un form es donde el usuario escribe o envía información.-->
+    <!--<input> Es un campo de entrada donde el usuario puede escribir información.-->
+    <!--Esto fue colocado para que el usuario pueda ingresar su nombre, 
+        y se puede generar ek ingreso de datos personales.-->
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="email" name="correo" placeholder="Correo" required>
+            <textarea name="mensaje" placeholder="Tu mensaje" rows="4"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- footer, es la parte inferior de la página (Los pies de la arquitectura) -->
+    <footer>
+    <!--copy son los derechos de autor-->
+        <p>&copy; 2026 Leonela Miranda. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- javascript al final del body, 
+     para asegurar que el HTML se cargue antes de ejecutar el script,-->
+    <!--"El Js le da interactividad a la arquitectura y movimientos"-->
+    <script src="js/script.js" defer></script>
+
+</body>
+</html>
+    <!--Fin-->

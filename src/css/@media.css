@@ -1,0 +1,104 @@
+/* --- media queries para que sea responsivo
+    todos divididos en un solo lugar. --- */
+
+    /* tablets */
+@media (max-width: 1024px) {
+
+    /* proyectos en 2 columnas */
+    .proyectos ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* la galeria se queda en 3 columnas */
+    .galeria {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* sobre mi se pone en columna */
+    .sobremi {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+    /* celulares */
+@media (max-width: 500px) {
+
+    /* titulo mas pequeño */
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    /* menu en columna */
+    nav {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    /* sobre mi en columna */
+    .sobremi {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem 1rem;
+    }
+
+    /* foto mas pequeña */
+    .perfil img {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    /* proyectos en 1 columna */
+    .proyectos ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+    /* celular */
+    /* esto afeta el menu de navegacion, 
+    que se muestra solo en celular, con un boton hamburguesa. */
+@media (max-width: 600px) {
+
+    /* mostrar botón */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* ocultar menú por defecto */
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--color-primario);
+        margin-top: 10px;
+    }
+
+    /* cuando está activo */
+    nav.activo {
+        display: flex;
+    }
+
+    nav a {
+        padding: 10px;
+        border-top: 1px solid rgba(255,255,255,0.2);
+    }
+}
+    /* celulares,
+        esta zona de celular afecta directamente las imagenes de mascotas */
+@media (max-width: 500px) {
+
+    /* galeria en 2 columnas */
+    .galeria {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    /* botones ocupan todo el ancho */
+    button {
+        width: 100%;
+        margin: 0.25rem 0;
+    }
+}
+/* --- media queries para que sea responsivo
+    todos divididos en un solo lugar. --- */ 
